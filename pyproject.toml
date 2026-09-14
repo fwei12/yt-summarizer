@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "youtube-summarizer"
+version = "0.1.0"
+description = "Skeleton for summarizing YouTube transcripts with OpenAI."
+requires-python = ">=3.8,<3.15"
+dependencies = [
+    "openai>=1.0",
+    "youtube-transcript-api>=1.2.4",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+]
+
+[project.scripts]
+youtube-summarizer = "youtube_summarizer.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
