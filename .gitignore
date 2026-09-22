@@ -2,6 +2,16 @@ node_modules/
 .env
 .env.*
 !.env.example
+.envrc
+*.pem
+*.key
+*.p12
+*.pfx
+.netrc
+.pypirc
+.npmrc
+secrets/
+credentials/
 dist/
 build/
 coverage/
